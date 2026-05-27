@@ -79,10 +79,11 @@ class Snake:
         self.score = 0
         self.high_score = 0
         self.alive = True
-        self.food = self._place_item()
+        self.food = None   # must be set before calling _place_item
         self.bonus = None
         self.bonus_timer = 0
         self._bonus_countdown = random.randint(8, 15)
+        self.food = self._place_item()
 
     def _occupied(self):
         s = set(self.body)
