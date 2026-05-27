@@ -14,8 +14,14 @@ A colorful terminal Snake game written in Python using `curses`. No dependencies
 ## Requirements
 
 - Python 3.6+
-- A terminal with color support (xterm, iTerm2, most Linux terminals)
+- A terminal with color support (xterm, iTerm2, Windows Terminal, most Linux terminals)
 - At least 20×10 terminal size (bigger is better — fullscreen recommended)
+
+**Windows users:** install `windows-curses` first:
+
+```powershell
+pip install windows-curses
+```
 
 ## Usage
 

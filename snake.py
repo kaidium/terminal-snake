@@ -4,9 +4,21 @@ Terminal Snake — a colorful curses snake game.
 Controls: arrow keys or WASD | q to quit | r to restart
 """
 
-import curses
+import sys
 import random
 import time
+
+try:
+    import curses
+except ImportError:
+    if sys.platform == "win32":
+        try:
+            import windows_curses as curses
+        except ImportError:
+            print("curses not found. Run:  pip install windows-curses")
+            sys.exit(1)
+    else:
+        raise
 
 # ── Constants ────────────────────────────────────────────────────────────────
 
